@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body bgcolor=" #ADD8E6">
+    
+    <form>
+        <fieldset>
+        <h1 align="center">XYZ College/School</h1>
+    <h2 align="center">Student Registration Form</h2>
+        <label for="image">Student Image:</label>
+        <input type="file" name="image" accept="image/*" required><br><br>
+        <label for="name">Student Name:</label>
+        <input type="text" name="name" placeholder="Full Name" required><br><br>
+        <label for="FName">Father's Name:</label>
+        <input type="text" name="FName" placeholder="Father's Name" required><br><br>
+        <label for="MName">Mother's Name:</label>
+        <input type="text" name="MName" placeholder="Mother's Name" required><br><br>
+        <label for="Gender">Gender:</label>
+        <label for="Gender">Male</label>
+        <input type="radio" name="Gender">
+        <label for="Gender">Female</label>
+        <input type="radio" name="Gender">
+        <label for="Gender">Others</label>
+        <input type="radio" name="Gender"><br><br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="xyz@gmail.com" required><br><br>
+        <label for="level">Level:</label>
+        <select>
+            <option value="High School">High School</option>
+            <option vale="Middle School">Middle School</option>
+            <option value="Primary School">Primary School</option><br>
+        </select><br><br>
+        <label for="Department">Department:</label>
+        <input list="Department">
+        <datalist id="Department">
+            <option value="Electrical">
+            <option value="Mechanical">
+            <option value="CSE">
+            <option value="Chemical">
+            <option value="IT">
+            <option value="Civil">
+            <option value="Metallurgy">
+            <option value="Automobile">
+        </datalist><br><br>
+        <label for="Tel">TelMobile:</label>
+        <input type="tel" name="Tel" placeholder="XXX XXX XXXX" required><br><br>
+        <hr>
+        <h2 align="center">Permanent Adress</h2>
+        <label for="state">State:</label>
+        <input type="text" name="state" placeholder="State" required><br><br>
+        <label for="City">City:</label>
+        <input type="text" name="City" placeholder="City" required><br><br>
+        <label for="Zipcode">Zip Code:</label>
+        <input type="number" name="Zipcode" placeholder="Zip Code" required><br><br>
+        <label for="Tel">TelMobile:</label>
+        <input type="tel" name="Tel" placeholder="XXX XXX XXXX" required><br><br>
+        <hr>
+        <h2 align="center">Temporary Address</h2>
+        <label for="same">Same as Permanent Address:</label>
+        <input type="checkbox" name="same"><br><br>
+        <label for="state">State:</label>
+        <input type="text" name="state" placeholder="State" required><br><br>
+        <label for="City">City:</label>
+        <input type="text" name="City" placeholder="City" required><br><br>
+        <label for="Zipcode">Zip Code:</label>
+        <input type="number" name="Zipcode" placeholder="Zip Code" required><br><br>
+        <label for="Tel">TelMobile:</label>
+        <input type="tel" name="Tel" placeholder="XXX XXX XXXX" required><br><br>
+        <input type="submit" value="Register">
+    </fieldset>
+        </form>
+</body>
+</html>
