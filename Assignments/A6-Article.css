@@ -1,0 +1,18 @@
+.center{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h2{
+    color: maroon;
+}
+
+.dlist dt{
+    color: blue;
+}
+
+.ollist ol>li{
+    color:blue;
+}
