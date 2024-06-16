@@ -1,0 +1,37 @@
+.rectangle{
+    width: 400px;
+    height: 2px;
+    border-style: solid;
+    position: absolute;
+    margin-top: 264px;
+    margin-left: 50px;
+    
+}
+
+.curve1{
+    width:300px;
+    height: 300px;
+    border-style: solid;
+    margin-top: 1px;
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-right-radius: 250px;
+    position: absolute;
+    transform: rotate(45deg);
+    margin-left: 100px;
+    
+}
+
+.curve2{
+    width:300px;
+    height: 300px;
+    border-style: solid;
+    margin-top: 229px;
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-right-radius: 250px;
+    position: absolute;
+    transform: rotate(225deg);
+    margin-left: 100px;
+    
+}
