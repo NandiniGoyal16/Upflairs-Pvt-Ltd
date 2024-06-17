@@ -9,7 +9,9 @@
     border-style: solid;
     border-color: red;
     border-radius: 20px; 
-    
+    background-image: url(Images/nile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box2{
@@ -23,6 +25,9 @@
     border-style: dashed;
     border-color: green;
     border-radius: 20px; 
+    background-image: url(Images/denali.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
@@ -37,6 +42,9 @@
     border-style: dotted;
     border-color: blue;
     border-radius: 20px; 
+    background-image: url(Images/grass.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
@@ -50,6 +58,9 @@
     height: 150px;
     border-style: solid;
     border-radius: 20px; 
+    background-image: url(Images/yellowbg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
