@@ -4,12 +4,14 @@
   margin-right: auto;
   border-radius: 20px;
   border-style: solid;
-  box-shadow: 10px 10px lightslategray;
+  box-shadow: 10px 10px 3px 3px darkslategrey;
 }
 
 h2{
     color: maroon;
     font-family: Arial;
+    text-shadow: 2px 2px 3px darkslategrey;
+    
 }
 
 .dlist dt{
@@ -22,6 +24,8 @@ h2{
 
 h1{
     font-family: Verdana;
+    text-align: center;
+    text-shadow: 3px 3px 3px darkslategrey;
 }
 
 #p1{
@@ -35,4 +39,10 @@ h1{
 
 p{
     text-align: justify;
+}
+
+a{
+    text-decoration:none;
+    color: darkslategray;
+    font-weight: bold;
 }

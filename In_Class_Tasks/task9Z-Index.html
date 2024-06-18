@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Z-Index application</title>
+    <style>
+        .box1{
+            width:200px;
+            height: 200px;
+            margin: 0px auto;
+            border: 3px solid;
+            margin-top: 150px;
+            position: absolute;
+            margin-left: 100px;
+            background-color: yellowgreen;
+            z-index: 1;
+        }
+
+        .box2{
+            width:130px;
+            height: 130px;
+            border: 3px solid;
+            position: absolute;
+            margin-top: 100px;
+            margin-left: 50px;
+            background-color: blue;
+        }
+
+        .box3{
+            width:130px;
+            height: 130px;
+            border: 3px solid;
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 50px;
+            background-color: brown;
+            z-index: 2;
+        }
+
+        .box4{
+            width:130px;
+            height: 130px;
+            border: 3px solid;
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 225px;
+            background-color: blue;
+            text-align: right;
+        }
+
+        .box5{
+            width:130px;
+            height: 130px;
+            border: 3px solid;
+            position: absolute;
+            margin-top: 100px;
+            margin-left: 225px;
+            background-color: brown;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1.</div>
+    <div class="box2">2.</div>
+    <div class="box3">3.</div>
+    <div class="box4">4.</div>
+    <div class="box5">5.</div>
+</body>
+</html>
