@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="header">
+    <a href="#" class="logo"><span>Port</span>folio</a>
+    <nav class="navbar" class="active">
+        <a href="#about_me">About Me</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+    </nav>
+    <a href="#contact1" class="contact" >Contact Me</a>
+   </header>
+   <div class="space"></div>
+   <section id="about_me">
+       <h1>About Me</h1>
+       <div class="about_me" >
+            <div class="myimage">
+                <img src="../Images/pfp3.jpg" class="img" alt="myphoto" title="myphoto">
+            </div>
+            <div class="myself">
+                I am currently a third year student pursuing bachelors in computer Science and Engineering from Amity university Rajasthan.
+                I am dedicated to honing my skills in software development and web development with experience in C, C++, MySQL, HTML, CSS, PHP and Data Structures and Algorithms. I am excited to embark on a career in technology. Eager to contribute to innovative projects and learn from seasoned professionals. In my leisure time you can find me making drawings, playing guitar and singing. 
+            </div>
+        </div>
+    </section>
+    <section id="experience">
+        <h1>Experience</h1>
+        <div class="experience">
+            <div class="logos">
+                <div class="logo1">
+                    <img src="../Images/codsoftimg.jpeg" class="imgExp">
+                </div>
+                <div class="logo2">
+                    <img src="../Images/altworldimg.jpeg" class="imgExp">
+                </div>
+            </div>
+            <div class="expdetails">
+                I have done 1 month remote internship from CodSoft in C++ Programming where I created a simple calculator, a number guessing game and tic-tac-toe game.
+                I gained a lot of experience. It was challenging but interesting as well. I created a graphical user interface so that users can have an user-friendly experience, also it looks attractive.
+                <br>
+                I have also created 3D games in AltWorld and earned up to 2500/-. It was interesting as well as challenging.
+            </div>
+        </div>
+    </section>
+    <div class="gototop">
+       <a href="#">Go To Top</a>
+    </div>
+<br><br>
+    <section id="projects">
+        <h1>Projects</h1>
+        <div class="box1">
+            <div class="box2">
+                <div class="circle1">
+                    <img src="../Images/iotimg.jpg" class="imgPro">
+                </div>
+                <br>
+                I created a car parking system based on IOT(Internet of Things). I used arduino UNO, breadborad, jumper wires, ultrasonic sensor, LED bulbs, LCD screen, resistor and a buzzer.
+                I used embedded C language and Arduino IDE platform. It was quite challenging at first but it became interesting as I progressed in it.
+            </div>
+            <div class="box3">
+                <div class="circle2">
+                    <img src="../Images/webdevimg.png" class="imgPro">
+                </div>
+                <br>
+                I created a website named The Cosmos which featured an animated solar-system made from scratch. I used languages like HTML, CSS and JavaScript. It was really fun makiing this website as I am very interested about the mysteries of the universe.
+            </div>
+            <div class="box4">
+                <div class="circle3">
+                    <img src="../Images/phpimg.jpg" class="imgPro">
+                </div>
+                <br>
+                I   created a user profile page where users can login themselves by creating a profile. This webpage has a database connection which helps in keeping the records of the users who have created their profiles. I used HTML, CSS, PHP and JavaScript including Apache Xampp Cotrol Panel.
+            </div>
+        </div>
+    </section>
+
+    <section id="contact1">
+        <h1>Contact Me</h>
+            <br><br>
+        <form action="" method="post" class="form">
+            <fieldset>
+            <label for="FName">First Name:</label>
+            <input type="text" name="FName" required size="30"><br><br>
+            <label for="LName">Last Name:</label>
+            <input type="text" name="LName" required size="30"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" required size="39"><br><br>
+            <label for="Message">Message Me!</label><br>
+            <textarea rows="5" cols="50"></textarea><br><br>
+            <input type="button" name="button" value="Submit" class="submit">
+            <br>
+        </fieldset>
+        </form>
+    </section>
+</body>
+</html>
