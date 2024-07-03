@@ -231,6 +231,37 @@
     0 32px 16px rgba(0,0,0,0.09);
 }
 
+.outerbox3{
+    display: flex;
+    width:100%;
+    justify-content: space-evenly;
+}
+
+.b1{
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 10.2px 10.4px 13.4px rgb(182, 180, 180);
+    inset: 3px 3px rgb(121, 119, 119);
+}
+
+.b2{
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 10.2px 10.4px 13.4px rgb(182, 180, 180) inset,
+    -10.2px -10.4px 13.4px rgb(182, 180, 180) inset;
+}
+
+.b3{
+    width: 300px;
+    border: 1px solid rgb(188, 185, 185);
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 4px 4px rgb(199, 199, 201), 8px 8px rgb(176, 174, 174), 12px 12px rgb(120, 122, 120), 16px 16px rgb(66, 67, 66);
+}
+
+
 .outerbox2{
     display: flex;
     width: 100%;
