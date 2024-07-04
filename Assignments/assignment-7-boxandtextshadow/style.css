@@ -328,3 +328,209 @@
     border: 1px solid;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
+
+.circle1{
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+    border: 1px solid;
+    margin-left: 60px;
+    margin-bottom: 80px;
+    box-shadow: 20px 0 0 0 grey,
+                10px -20px 0 0 yellow;
+}
+
+.circle2{
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+    margin-left: 60px;
+    border: 1px solid;
+    box-shadow:  10px -20px 0 0 yellow,
+                20px 0 0 0 grey;
+}
+
+.redrect{
+    margin: 0px auto;
+    display: flex;
+    background-color: red;
+    width: 80%;
+    height: 600px;
+    align-items: center;
+}
+
+.smallrect{
+    border: 2px solid white;
+    margin: 0px auto;
+    width: 50%;
+    text-align: center;
+}
+
+.css{
+    font-family: arial;
+    text-shadow: 1px 1px  maroon, 1px 2px maroon, 2px 4px maroon ,3px 6px maroon, 4px 8px 1px maroon, 5px 10px  maroon, 6px 12px maroon, 7px 14px maroon, 8px 16px maroon, 9px 18px maroon, 10px 20px maroon, 11px 22px maroon, 12px 24px maroon, 13px 26px maroon, 14px 28px maroon, 15px 30px maroon, 16px 32px maroon, 17px 34px maroon, 18px 36px maroon, 19px 38px maroon, 20px 40px maroon, 21px 42px maroon, 22px 44px  maroon, 23px 46px maroon, 24px 48px maroon, 25px 50px maroon, 26px 52px maroon, 27px 54px maroon, 28px 56px maroon;
+    color: white;
+    font-size: 100px;
+}
+
+.ts{
+    font-size: 80px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    text-shadow: 6px 2px 9px black;
+}
+
+.ef{
+    font-size: 80px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    text-shadow: 6px 2px black;   
+}
+
+.outerbox4{
+    margin: 0px auto;
+    background-color: lightblue;
+    width: 80%;
+    height: 600px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.pbox>p{
+    font-size: 100px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.blue { color: blue; 
+    text-shadow: 6px 2px purple;
+}
+.red { color: red; 
+    text-shadow: 6px 2px orange;
+}
+.yellow { color: yellow;
+    text-shadow: 6px 2px green;
+ }
+.green { color: green; 
+    text-shadow: 6px 2px blue;
+}
+.orange { color: orange;
+    text-shadow: 6px 2px red;
+}
+.purple { color: purple; 
+    text-shadow: 6px 2px pink;
+}
+.pink { color: pink;
+    text-shadow: 6px 2px maroon;
+}
+
+.outerbox5{
+    background-color: rgb(245, 245, 174);
+    width: 80%;
+    display: flex;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerbox1>p{
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Gill Sans';
+    font-weight: bold;
+}
+
+.variable{
+    color: rgb(247, 205, 205);
+   text-shadow: 1px 1px 0 #4c0000, 
+   1px 2px 1px #660000, 
+   2px 4px 1px #800000, 
+   3px 6px 1px #990000, 
+   4px 8px 1px #b30000, 
+   5px 10px 1px #cc0000, 
+   6px 12px 1px #e60000, 
+   7px 14px 1px #ff1a1a, 
+   8px 16px 1px #ff3333, 
+   9px 18px 1px #ff4d4d, 
+   10px 20px 1px #ff6666, 
+   11px 22px 1px #ff8080, 
+   12px 24px 1px #ff9999, 
+   13px 26px 1px #ffb3b3, 
+   14px 28px 1px #ffcccc, 
+   15px 30px 1px #ffe6e6;
+}
+
+.spread{
+    color: lightyellow;
+    text-shadow: 
+    1px 1px 0 #7a5e00, 
+    1px 2px 1px #8c7200, 
+    2px 4px 1px #9e8600, 
+    3px 6px 1px #b09900, 
+    4px 8px 1px #c1ad00, 
+    5px 10px 1px #d3c100, 
+    6px 12px 1px #e4d400, 
+    7px 14px 1px #f6e800, 
+    8px 16px 1px #fff200, 
+    9px 18px 1px #fffb33, 
+    10px 20px 1px #fffc66, 
+    11px 22px 1px #fffd99, 
+    12px 24px 1px #fffecc, 
+    13px 26px 1px #f7f7c8, 
+    14px 28px 1px #f9f9bd, 
+    15px 30px 1px #fafaac, 
+    16px 32px 1px #fbfbb0;
+}
+
+.longshadow{
+    color: lightgreen;
+    text-shadow: 
+    1px 1px 0 #004d00, 
+    1px 2px 1px #006600, 
+    2px 4px 1px #007a00, 
+    3px 6px 1px #009900, 
+    4px 8px 1px #00b300, 
+    5px 10px 1px #00cc00, 
+    6px 12px 1px #00e600, 
+    7px 14px 1px #00ff00, 
+    8px 16px 1px #33ff33, 
+    9px 18px 1px #66ff66, 
+    10px 20px 1px #99ff99, 
+    11px 22px 1px #ccffcc, 
+    12px 24px 1px #ccffcc, 
+    13px 26px 1px #d5f5d5, 
+    14px 28px 1px #d7fad7, 
+    15px 30px 1px #e4fae4, 
+    16px 32px 1px #eafaea;
+}
+
+.with{
+    color: lightblue;
+    text-shadow: 
+  1px 1px 0 #00264d, 
+  1px 2px 1px #003366, 
+  2px 4px 1px #004080, 
+  3px 6px 1px #005199, 
+  4px 8px 1px #0061b3, 
+  5px 10px 1px #0071cc, 
+  6px 12px 1px #0081e6, 
+  7px 14px 1px #0092ff, 
+  8px 16px 1px #33aaff, 
+  9px 18px 1px #66bbff, 
+  10px 20px 1px #99ccff, 
+  11px 22px 1px #cce6ff, 
+  12px 24px 1px #beddf7, 
+  13px 26px 1px #d3e6f9, 
+  14px 28px 1px #cde0ef, 
+  15px 30px 1px rgb(222, 233, 241), 
+  16px 32px 1px #d7e5f1;
+
+
+
+
+  
+}
