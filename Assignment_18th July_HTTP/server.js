@@ -18,21 +18,21 @@ const server = http.createServer((request, response) => {
         
     }
 
-    else if(request.url== '/Computer Architecture'){
+    else if(request.url== '/Computer_Architecture'){
         let htmlFile3 = fs.readFileSync('computer_architecture.html', 'utf-8')
         // response.setHeader('Content-Type','text/html')
         // response.writeHead(200)
         response.end(htmlFile3)
     }
 
-    else if(request.url== '/Software Engineering'){
+    else if(request.url== '/Software_Engineering'){
         let htmlFile4 = fs.readFileSync('software_engineering.html', 'utf-8')
         // response.setHeader('Content-Type','text/html')
         // response.writeHead(200)
         response.end(htmlFile4)
     }
 
-    else if(request.url== '/Operating Systems'){
+    else if(request.url== '/Operating_Systems'){
         let htmlFile5 = fs.readFileSync('operating_systems.html', 'utf-8')
         // response.setHeader('Content-Type','text/html')
         // response.writeHead(200)
