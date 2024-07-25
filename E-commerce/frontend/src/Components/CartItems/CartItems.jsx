@@ -51,7 +51,7 @@ const CartItems = () => {
                         <h3>{`\u20B9${getTotalCartAmount()}`}</h3>
                     </div>
                 </div>
-                <button>PROCEED TO CHECKOUT</button>
+                <button onClick={() => alert("Your order has been placed!")}>PROCEED TO CHECKOUT</button>
             </div>
             <div className="cartitems-promocode">
                 <p>If you have a promocode, Enter it here</p>
