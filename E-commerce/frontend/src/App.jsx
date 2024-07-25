@@ -13,7 +13,7 @@ import Shop from "./Pages/Shop";
 import ShopCategory from "./Pages/ShopCategory";
 
 /**
- * App.
+ * App 1.
  */
 function App() {
   return (
