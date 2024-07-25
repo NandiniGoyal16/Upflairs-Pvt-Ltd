@@ -22,7 +22,11 @@ const CartItems = () => {
           return (
             <div key={e.id}>
               <div className="cartitems-format cartitems-format-main">
-                <img src={e.image} alt="" className="carticon-product-icon" />
+                <img
+                  src={`data:${e.image.contentType};base64,${e.image.data}`}
+                  alt=""
+                  className="carticon-product-icon"
+                />
                 <p>{e.name}</p>
                 <p>{`\u20B9${e.newPrice}`}</p>
                 <button className="cartitems-quantity">
