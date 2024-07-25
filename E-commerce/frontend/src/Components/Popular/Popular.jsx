@@ -7,7 +7,7 @@ const Popular = () => {
 
   useEffect(() => {
     // Send a GET request to the server to get all products from the database.
-    fetch("http://localhost:4000/products")
+    fetch("http://localhost:4000/products/popularinwomen")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
@@ -23,9 +23,9 @@ const Popular = () => {
               key={item.id}
               id={item.id}
               name={item.name}
-              image={null}
-              new_price={item.newPrice}
-              old_price={item.oldPrice}
+              image={`data:${item.image.contentType};base64,${item.image.data}`}
+              newPrice={item.newPrice}
+              oldPrice={item.oldPrice}
             />
           );
         })}
