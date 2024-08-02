@@ -11,11 +11,9 @@ app.use(express.json());
 
 app.use(cors());
 
-// console.log(`${Buffer.from([1, 2, 3]).toString("base64")}`);
-
 try {
   await mongoose.connect(
-    "mongodb+srv://manul:temp123456@shopperdb.myh7dzn.mongodb.net/"
+    "mongodb+srv://nandini:mahiru@myshoppee.cjsuwse.mongodb.net/"
   );
   console.log("connected successfully!");
 } catch (error) {
@@ -28,27 +26,7 @@ app.get("/", (req, res) => {
   res.send("App running");
 });
 
-// const storage = multer.memoryStorage({
-//   destination: "./upload/images",
-//   filename: (_req, file, cb) => {
-//     return cb(
-//       null,
-//       `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`
-//     );
-//   },
-// });
-
-// Used for uploading files from UI multipart form data.
 const upload = multer();
-
-// app.use("/images", express.static("upload/images"));
-
-// app.post("/upload", upload.single("product"), (req, res) => {
-//   res.json({
-//     success: true,
-//     imageUrl: `http://localhost:${PORT}/images/${req.file.filename}`,
-//   });
-// });
 
 const processImages = (products) => {
   return products.map((p) => ({
@@ -63,31 +41,11 @@ const processImages = (products) => {
 app.get("/products", async (req, res) => {
   const products = await Product.find({}).lean();
   console.log(`Fetching ${products.length} products for /products`);
-  // console.log(
-  //   products[0].image,
-  //   Buffer.from(products[0].image.data).toString("base64")
-  // );
-  // console.log(products[0].image.data.toString("base64"));
-  // console.log(
-  //   products.map((p) => {
-  //     console.log({ ...p });
-  //     return {
-  //       ...p,
-  //       image: {
-  //         contentType: p.image.contentType,
-  //         data: "hlloe",
-  //       },
-  //     };
-  //   })
-  // );
+
   res.send(processImages(products));
 });
 
 app.post("/products/add", upload.single("image"), async (req, res) => {
-  // const image = new Image();
-  // image.name = req.file.filename;
-  // image.data = fs.readFileSync(req.file.path);
-  // image.contentType = req.file.mimetype;
 
   console.log(req.file);
   const product = new Product({
@@ -104,7 +62,6 @@ app.post("/products/add", upload.single("image"), async (req, res) => {
 
   // Save the product to MongoDB.
   await product.save();
-  // fs.unlinkSync(req.file.path);
 
   console.log("Product saved!", { id: product.id, name: req.body.name });
   res.json({
@@ -137,7 +94,6 @@ app.post("/products/delete", async (req, res) => {
 });
 
 //Schema creating for user model
-
 const Users = mongoose.model("Users", {
   name: {
     type: String,
@@ -168,14 +124,10 @@ app.post("/signup", async (req, res) => {
     });
   }
   let cart = {};
-  for (let i = 0; i < 300; i++) {
-    cart[i] = 0;
-  }
   const user = new Users({
     name: req.body.username,
     email: req.body.email,
     password: req.body.password,
-    cartData: cart,
   });
 
   await user.save();
@@ -210,6 +162,59 @@ app.post("/login", async (req, res) => {
     res.json({ success: false, errors: "Wrong Email Address" });
   }
 });
+
+//creating middleware to fetch user
+const fetchUser = async (req, res, next)=> {
+  const token = req.header('auth-token');
+  if (!token){
+    res.status(401).send({errors:"Please authenticate using valid token."})
+  }
+  else{
+    try{
+      const data = jwt.verify(token, 'secret_ecom');
+      req.user = data.user;
+      next();
+    }
+    catch(error){
+      res.status(401).send({errors:"Please authenticate using a valid token."})
+
+    }
+  }
+}
+
+//creating endpoint for adding products in cartdata =>
+app.post('/addtocart', fetchUser, async(req, res)=>{
+    console.log("Added", req.body.itemId);
+
+    let userData = await Users.findOne({_id:req.user.id});
+    if(userData.cartData === undefined ){
+      userData.cartData = {};
+    }
+    if(userData.cartData[req.body.itemId] === undefined){
+      userData.cartData[req.body.itemId] = 0;
+    }
+    userData.cartData[req.body.itemId] += 1;
+    await Users.findOneAndUpdate({_id:req.user.id}, {cartData:userData.cartData});
+    res.send({success: "added"})
+    console.log(userData.cartData);
+})
+
+//creating endpoint tp remove products from cartData
+app.post('/removefromcart', fetchUser, async (req, res)=>{
+  console.log("Removed", req.body.itemId);
+  let userData = await Users.findOne({_id:req.user.id});
+  if(userData.cartData[req.body.itemId]>0)
+    userData.cartData[req.body.itemId] -= 1;
+    await Users.findOneAndUpdate({_id:req.user.id}, {cartData:userData.cartData});
+    res.send({success:"Removed"})
+})
+
+//creating endpoint to get cartData =>
+app.post('/getcart', fetchUser, async (req, res)=>{
+  console.log("GetCart");
+  let userData = await Users.findOne({_id:req.user.id});
+  res.json(userData.cartData?? {});
+})
 
 app.listen(PORT, (error) => {
   if (!error) {
